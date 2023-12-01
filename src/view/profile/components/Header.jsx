@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native';
 //expo
 import Constants from 'expo-constants'
 
-const Header = ({navigation}) => {
+const Header = () => {
+
+  const navigation = useNavigation()
 
   const userDate = {
     name: 'nasha0609',
@@ -28,19 +30,19 @@ const Header = ({navigation}) => {
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
           <TouchableOpacity
             style={styles.buttonDetails}
-            onPress={() => navigation.navigate('Reels')}
+            onPress={() => navigation.navigate('EditProfile')}
           >
             <Text style={{ fontWeight: '700' }}>Editar Perfil</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.buttonDetails}
-            onPress={() => navigation.navigate()}
+            onPress={() => navigation.navigate('Gallery')}
           >
             <Text style={{ fontWeight: '700' }}>Ver Archivo</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{ marginRight: 15 }}
-            onPress={() => navigation.navigate('Reels')}
+            onPress={() => navigation.navigate('Settings')}
           >
             <Ionicons name="md-settings-outline" size={27} color="black" />
           </TouchableOpacity>

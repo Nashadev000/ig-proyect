@@ -1,22 +1,19 @@
 
 
-import { ScrollView, StyleSheet, View, TouchableOpacity,Text } from 'react-native'
-import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Body from '../components/Body'
+import { ScrollView, StyleSheet, View } from 'react-native'
+// import Header from './profile/components/Header'
+// import Footer from './profile/components/Footer'
+// import Body from './profile/components/Body'
 import Constants from 'expo-constants'
-
-
 
 const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-    <ScrollView>
-      <Header />
-      <Body />
-      <Footer />
+      <ScrollView>
+        {/* <Header />
+        <Body />
+        <Footer /> */}
       </ScrollView>
     </View>
   )

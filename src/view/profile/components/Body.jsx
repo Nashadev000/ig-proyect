@@ -1,7 +1,7 @@
 import { ScrollView } from 'react-native'
 import { Dimensions, StyleSheet, Text, View, Image } from 'react-native'
 
-import { featuredStories, userProfile } from '../data/user-profile'
+import { featuredStories, userProfile } from '../../../data/user-profile'
 
 const width = Dimensions.get('screen').width
 
