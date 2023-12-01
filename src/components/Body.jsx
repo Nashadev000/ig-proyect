@@ -1,5 +1,5 @@
-import { Dimensions, StyleSheet, Text, View, Image } from 'react-native'
 import { ScrollView } from 'react-native'
+import { Dimensions, StyleSheet, Text, View, Image } from 'react-native'
 
 import { featuredStories, userProfile } from '../data/user-profile'
 
@@ -10,12 +10,11 @@ const Body = () => {
     <>
       <View style={{ padding: 10 }}>
         <Text style={{ marginHorizontal: 20, fontWeight: '900', paddingBottom: 5 }}>{userProfile.name}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.description}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.line}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.hobby}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.sign}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.age}</Text>
-        <Text style={{ marginHorizontal: 20 }}>{userProfile.nationality}</Text>
+        <Text style={{ marginHorizontal: 10, marginBottom: 2 }}>{userProfile.description}</Text>
+        <Text style={{ marginHorizontal: 10 }}>{userProfile.hobby}</Text>
+        <Text style={{ marginHorizontal: 10 }}>{userProfile.sign}</Text>
+        <Text style={{ marginHorizontal: 10 }}>{userProfile.age}</Text>
+        <Text style={{ marginHorizontal: 10 }}>{userProfile.nationality}</Text>
       </View>
 
       <ScrollView
@@ -28,7 +27,7 @@ const Body = () => {
                 <Image style={styles.imageStory}
                   source={{ uri: story.photo }}
                 />
-                <Text style={{ alignSelf: 'center' }}>{story.title}</Text>
+                <Text style={{ alignSelf: 'center', fontWeight: '600' }}>{story.title}</Text>
               </View>
             )
           })}
@@ -42,9 +41,9 @@ export default Body
 
 const styles = StyleSheet.create({
   imageStory: {
-    padding: 15,
     width: width * 0.22,
     height: width * 0.22,
-    borderRadius: 100
+    borderRadius: 100,
+
   }
 })

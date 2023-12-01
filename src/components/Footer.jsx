@@ -10,7 +10,7 @@ const Footer = () => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    axios.get('https://dog.ceo/api/breeds/image/random/5')
+    axios.get('https://dog.ceo/api/breeds/image/random/10')
       .then((res) => {
         setImages(res.data.message)
       })
@@ -21,17 +21,18 @@ const Footer = () => {
 
   return (
     <>
-      <View style={{ flex: 5, flexDirection: 'row', alignSelf: 'center', padding: 10 }}>
-        <TouchableOpacity style={{ flexDirection: 'row', gap: 15, alignSelf: 'center' }}>
-          <Text>
-            PUBLICACIONES
-          </Text>
-          <Text> REELS
-          </Text>
-          <Text> GUARDADO
-          </Text>
-          <Text> ETIQUETADAS
-          </Text>
+      <View style={{ padding: 15, flexDirection: 'row', justifyContent: 'space-around', backgroundColor: 'black' }}>
+        <TouchableOpacity>
+          <Text style={styles.titlesButton}>PUBLICACIONES</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.titlesButton}> REELS </Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.titlesButton}> GUARDADO</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.titlesButton}> ETIQUETADAS</Text>
         </TouchableOpacity>
       </View>
 
@@ -39,10 +40,13 @@ const Footer = () => {
         {images.map((image, index) => {
           return (
             <View key={index} style={styles.photo}>
-              <Image
-                source={{ uri: image }}
-                style={{ flex: 1, borderRadius: 10 }}
-              />
+              <TouchableOpacity
+                style={{ flex: 1 }}>
+                <Image
+                  source={{ uri: image }}
+                  style={{ flex: 1 }}
+                />
+              </TouchableOpacity>
             </View>
           )
         })}
@@ -55,17 +59,18 @@ export default Footer
 
 const styles = StyleSheet.create({
   photo: {
-    width: width * 0.42,
-    height: width * 0.42,
-    backgroundColor: 'black',
-    borderRadius: 10
+    width: width * 0.45,
+    height: width * 0.45,
   },
   containerPhotos: {
-    flex: 1,
     gap: 10,
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     flexDirection: 'row',
     padding: 15
+  },
+  titlesButton: {
+    fontWeight: '900',
+    color: 'white'
   }
 })
