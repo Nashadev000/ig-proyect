@@ -10,7 +10,7 @@ const Footer = () => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    axios.get('https://dog.ceo/api/breeds/image/random/10')
+    axios.get('https://dog.ceo/api/breed/hound/images/random/20')
       .then((res) => {
         setImages(res.data.message)
       })
@@ -40,13 +40,10 @@ const Footer = () => {
         {images.map((image, index) => {
           return (
             <View key={index} style={styles.photo}>
-              <TouchableOpacity
-                style={{ flex: 1 }}>
                 <Image
                   source={{ uri: image }}
-                  style={{ flex: 1 }}
-                />
-              </TouchableOpacity>
+                  style={{ flex: 1, borderRadius:10}}
+                />             
             </View>
           )
         })}
@@ -67,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     flexDirection: 'row',
-    padding: 15
+    padding: 15,
   },
   titlesButton: {
     fontWeight: '900',

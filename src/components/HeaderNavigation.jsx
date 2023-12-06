@@ -20,9 +20,10 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 10,
     alignItems: 'center'
+    
   },
   title: {
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   }
 })

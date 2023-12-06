@@ -42,3 +42,9 @@ export const featuredStories = [
   },
   
 ]
+
+export const userDate = {
+  name: 'nasha0609',
+  photo: 'https://i.pinimg.com/564x/e7/54/0d/e7540d469c9f6bfd8b15a00a2e0e834a.jpg',
+  avatar: 'https://i.pinimg.com/564x/20/9f/00/209f009f8ef58f89e896cb70a11c3494.jpg'
+}

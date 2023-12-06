@@ -32,7 +32,7 @@ const App = () => {
           <Stack.Screen
             name='EditProfile'
             component={EditProfileScreen}
-            options={{ title: 'Editar Perfil' }}
+            options={{ title: 'Editar Perfil'}}
           />
           <Stack.Screen
             name='Gallery'

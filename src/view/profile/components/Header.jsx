@@ -1,18 +1,16 @@
 import { useState } from 'react'
 import { Ionicons } from '@expo/vector-icons';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 //expo
 import Constants from 'expo-constants'
+//data
+import { userDate } from '../../../data/user-profile';
 
 const Header = () => {
 
   const navigation = useNavigation()
 
-  const userDate = {
-    name: 'nasha0609',
-    photo: 'https://i.pinimg.com/564x/bf/fd/85/bffd85ef6043c3c82caab0a84b411f7d.jpg'
-  }
 
   const [publi, setPubli] = useState(10)
   const [seg, setSeg] = useState(151)
