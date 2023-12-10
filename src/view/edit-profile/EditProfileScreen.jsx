@@ -19,13 +19,12 @@ const EditProfileScreen = () => {
   }
 
   // Concatenar solo los strings
-  const concatenatedStrings = `${userProfile.name}\n${userProfile.description}\n${userProfile.hobby.join('')}\n${userProfile.sign}\n${userProfile.age}\n${userProfile.nationality}`;
+  const concatenatedStrings = `${userProfile.description}\n${userProfile.hobby.join('')}\n${userProfile.sign}\n${userProfile.age}\n${userProfile.nationality}`;
 
   const [presentation, setPresentation] = useState(concatenatedStrings)
 
   const data = {
     presentation,
-    name,
   }
 
   return (
@@ -43,20 +42,18 @@ const EditProfileScreen = () => {
           </View>
         </View>
         <View style={{ flex: 1, padding: 10 }}>
-          {/* KeyboardAvoidingView -> Ajusta la posición cuando el teclado aparece o desaparece. */}
-          <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-            {/* Keyboard.dismiss -> Cierra el teclado cuando se toca fuera de un elemento de entrada. */}
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View >
                 <Text style={styles.titleInput}>Nombre</Text>
                 <TextInput
                   style={styles.textInput}
-                  value={name}
+                  value={userProfile.name}
                   onChangeText={handleChangeName}
                 />
                 <Text style={styles.titleInput}>Nombre de usuario</Text>
-                <TextInput style={styles.textInput} />
+                <TextInput 
+                style={styles.textInput} 
+                  value={userDate.name}
+                />
                 <Text style={styles.titleInput}>Pronombres</Text>
                 <TextInput style={styles.textInput} />
                 <Text style={styles.titleInput}>Presentación</Text>
@@ -104,8 +101,6 @@ const EditProfileScreen = () => {
                   </Text>
                 </TouchableOpacity>
               </View>
-            </TouchableWithoutFeedback>
-          </KeyboardAvoidingView>
         </View>
       </ScrollView>
 
