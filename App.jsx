@@ -37,7 +37,7 @@ const App = () => {
           <Stack.Screen
             name='Gallery'
             component={GalleryScreen}
-            options={{ title: 'Galeria' }}
+            options={{ title: 'Archivar' }}
           />
           <Stack.Screen
             name='Settings'

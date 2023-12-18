@@ -25,6 +25,7 @@ const EditProfileScreen = () => {
 
   const data = {
     presentation,
+    name
   }
 
   return (
@@ -46,7 +47,7 @@ const EditProfileScreen = () => {
                 <Text style={styles.titleInput}>Nombre</Text>
                 <TextInput
                   style={styles.textInput}
-                  value={userProfile.name}
+                  value={name}
                   onChangeText={handleChangeName}
                 />
                 <Text style={styles.titleInput}>Nombre de usuario</Text>
